@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* flexbox- 1 hemjeest huvaalt 
+gridbox - 2 hemjeest huvaalt */
+/* !important n zaaval oruulna */
+/* grid-template-columns- */
+/* .wrap {
+    display: flex;
+    gap: 1rem;
+}
+.wrap .box {
+    height: 200px;
+    background-color: yellow;
+}
+
+.wrap .middle {
+    background-color: blue !important   ;
+    flex: 1;
+    
+} */
+.wrap {
+    margin: auto;
+   width: 1200px;       
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+    grid-template-rows: 250px 250px 250px;
+    gap: 1rem;
+}
+.box {  
+    background-color: orangered;
+}
+.box:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.box:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} 
